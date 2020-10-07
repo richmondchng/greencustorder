@@ -2,7 +2,10 @@ package com.demo.richmond.custorder.service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Scanner;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,5 +51,16 @@ public class DataService {
         bean.setOrderAmount(order.getOrderAmount());
         bean.setOrderDate(order.getOrderDate());
         return bean;
+    }
+
+    public int numberOfWords(final String a) {
+        Scanner scanner = new Scanner(a);
+        scanner.useDelimiter(" ");
+        Set<String> words = new HashSet<>();
+        while (scanner.hasNext()) {
+            words.add(scanner.next());
+        }
+        scanner.close();
+        return words.size();
     }
 }
