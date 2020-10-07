@@ -1,10 +1,16 @@
 package com.demo.richmond.custorder.data.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,4 +35,7 @@ public class CustomerEntity {
 
     @Column(name = "customerAddress")
     private String customerAddress;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "customer")
+    private Set<OrderEntity> orders = new HashSet<>();
 }
