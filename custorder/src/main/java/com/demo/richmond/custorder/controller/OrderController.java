@@ -12,7 +12,7 @@ import com.demo.richmond.custorder.service.OrderService;
 import com.demo.richmond.custorder.service.dto.OrderDTO;
 
 @RestController
-@RequestMapping(path = "/v1.0")
+@RequestMapping(path = "/api/v1.0")
 public class OrderController {
 
     @Autowired

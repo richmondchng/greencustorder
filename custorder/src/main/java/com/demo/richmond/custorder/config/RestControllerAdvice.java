@@ -1,4 +1,4 @@
-package com.demo.richmond.custorder.controller;
+package com.demo.richmond.custorder.config;
 
 import java.time.LocalDateTime;
 

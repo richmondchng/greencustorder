@@ -12,7 +12,7 @@ import com.demo.richmond.custorder.service.CustomerService;
 import com.demo.richmond.custorder.service.dto.CustomerDTO;
 
 @RestController
-@RequestMapping(path = "/v1.0")
+@RequestMapping(path = "/api/v1.0")
 public class CustomerController {
 
     @Autowired
